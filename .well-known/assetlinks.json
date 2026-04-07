@@ -1,0 +1,11 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.smartreadgo.app",
+    "sha256_cert_fingerprints": [
+      "A3:5A:64:06:3B:37:59:66:44:FF:08:32:E7:46:BA:5D:DD:17:07:8D:9B:80:25:E1:89:B3:C3:D1:0D:73:F4:B8",
+      "C6:C0:30:69:E1:28:80:76:6D:3E:11:DB:D6:4A:FB:BE:22:00:33:03:41:16:C9:98:63:0E:BE:56:5C:75:67:52"
+    ]
+  }
+}]
