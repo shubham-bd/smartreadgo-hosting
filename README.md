@@ -1,0 +1,1 @@
+# smartreadgo-hosting
