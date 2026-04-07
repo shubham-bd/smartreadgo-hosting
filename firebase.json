@@ -2,11 +2,14 @@
   "hosting": {
     "public": ".",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "redirects": [
+    "rewrites": [
       {
-        "source": "/news/:article_id",
-        "destination": "https://newscast-go.emergent.host/api/news/:article_id",
-        "type": 302
+        "source": "/news/**",
+        "destination": "/news/index.html"
+      },
+      {
+        "source": "/news",
+        "destination": "/news/index.html"
       }
     ],
     "headers": [
@@ -16,6 +19,15 @@
           {
             "key": "Content-Type",
             "value": "application/json"
+          }
+        ]
+      },
+      {
+        "source": "/news/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
           }
         ]
       }
