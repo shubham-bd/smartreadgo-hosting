@@ -2,10 +2,11 @@
   "hosting": {
     "public": ".",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "/news/**",
-        "destination": "/news/index.html"
+        "source": "/news/:article_id",
+        "destination": "https://newscast-go.emergent.host/api/news/:article_id",
+        "type": 302
       }
     ],
     "headers": [
