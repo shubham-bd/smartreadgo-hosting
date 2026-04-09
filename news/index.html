@@ -51,14 +51,17 @@
   <h1>SmartReadGo</h1>
   <p>Audio news for busy professionals.<br/>Listen to the news. Save your time.</p>
   <a class="btn" id="open-btn" href="#">Opening article...</a>
-  <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.smartreadgo.app">
+  <a class="btn btn-secondary" id="store-btn" href="https://play.google.com/store/apps/details?id=com.smartreadgo.app">
     Get the App
   </a>
   <script>
     (function() {
       const parts = window.location.pathname.split('/');
       const articleId = parts[parts.length - 1];
-      const playStoreUrl = 'https://play.google.com/store/apps/details?id=com.smartreadgo.app';
+      const playStoreUrl = navigator.userAgent.match(/Android/i)
+        ? 'market://details?id=com.smartreadgo.app'
+        : 'https://play.google.com/store/apps/details?id=com.smartreadgo.app';
+      document.getElementById('store-btn').href = playStoreUrl;
       const appUrl = articleId && articleId !== 'index.html' ?
         'smartreadgo://news/' + articleId :
         'smartreadgo://home';
